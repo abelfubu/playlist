@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Baloo Da 2', cursive;
+  -webkit-font-smoothing: antialiased;
+  background: #c6ffdd46;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  color: #232323;
+  background: #c6ffdd;
+  font-weight: bold;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  box-shadow: 0 4px 4px rgba(20, 20, 20, 0.192);
+}
+
+header ul {
+  display: flex;
+}
+
+ul {
+  justify-content: space-around;
+  padding: 0 16px;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 16px;
+  cursor: pointer;
+}
+
+aside li {
+  font-size: 1.25;
+  font-weight: bold;
+}
+
+aside {
+  background: #c6ffdd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 100vh;
+  position: fixed;
+  width: 250px;
+  top: 58px;
+  padding: 32px 24px 0;
+  z-index: 1;
+}
+
+.slide-out {
+  animation: slide-out 0.3s;
+  display: none;
+}
+.slide-in {
+  animation: slide-in 0.3s;
+  display: block;
+}
+
+.zoom {
+  animation: zoom 0.3s;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-800px);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-800px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateX(-800px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    zoom: 50%;
+  }
+  80% {
+    zoom: 120%;
+  }
+  100% {
+    zoom: 100%;
+  }
+}
+
+.content {
+  margin-left: 25%;
+  transition: margin-left 0.3s ease-out;
+  margin-top: 72px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  margin: 0 64px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.342);
+  border-radius: 6px;
+  min-height: 25px;
+  padding: 6px 24px;
+  border-top: 5px solid #fbd786;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px auto;
+}
+
+.form {
+  padding: 16px;
+  position: relative;
+  width: 85%;
+  margin: 0 auto 64px;
+  top: 32px;
+}
+
+#form-list input {
+  padding: 12px;
+
+  width: 85%;
+}
+
+label {
+  display: block;
+  padding: 8px 0;
+  display: none;
+}
+
+.card input {
+  padding: 6px;
+  margin: 0 12px;
+  max-height: 24px;
+}
+
+option {
+  padding-top: 18px;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 16px 0;
+  padding: 8px;
+  background: linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.342);
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+#toggle {
+  cursor: pointer;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.103);
+  margin: 8px;
+  padding: 6px 12px;
+}
+
+#toggle:hover {
+  color: #f7797d;
+}
+
+.error {
+  color: rgb(228, 112, 112);
+  visibility: hidden;
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+#error {
+  position: absolute;
+  width: 300px;
+  right: 33%;
+}
+
+.title {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid span {
+  font-weight: bold;
+  display: block;
+  font-size: 12px;
+  color: #614748;
+}
+
+.grid h3,
+p {
+  margin-top: 0px;
+}
+
+.grid .card {
+  display: grid;
+  grid-template-columns: 30% 30% 30% 10%;
+}
+
+@media (max-width: 900px) {
+  .grid .card,
+  .card {
+    display: block;
+  }
+  .card input {
+    display: block;
+    width: 85%;
+    margin: 12px 0;
+  }
+  #form {
+    width: 75%;
+  }
+  #error {
+    position: absolute;
+    width: 300px;
+    right: 150px;
+  }
+}
+
+#logo {
+  font-weight: bold;
+}
+
+#abel {
+  position: absolute;
+  bottom: 16px;
+  left: 22%;
+  z-index: 3;
+  margin: 0 auto;
+}
