@@ -117,7 +117,7 @@ aside {
 }
 
 .content {
-  margin-left: 25%;
+  margin-left: 260px;
   transition: margin-left 0.3s ease-out;
   margin-top: 72px;
 }
