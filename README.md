@@ -1,8 +1,8 @@
 # Playlist
 
-[Live Demo - Descansa y respira](https://abelfubu.github.io/playlist/)
+[Live Demo - Playlist](https://abelfubu.github.io/playlist/)
 
-Aquí una muestra de haber sobrevivido el contacto con las clases en javascript. Desde luego algo que es importante y fundamental para mi es disfrutar jugando y aprendiendo al mismo tiempo.
+Aquí una muestra de haber sobrevivido el contacto con la programación orientada a objetos con javascript. Desde luego algo que es importante y fundamental para mi es disfrutar jugando y aprendiendo al mismo tiempo.
 
 Así que he decidido llevar la práctica a otro nivel y ver como podía interaccionar con el DOM virtual.
 
@@ -16,7 +16,7 @@ Todo el proyecto está hecho solo con:
 
 ## Objetivos
 
-Desarrollar un pequeño proyecto poniendo en práctica clases en javascript, DOM virtual, grid y flexbox en CSS.
+Desarrollar un pequeño proyecto poniendo en práctica la programación orientada a objetos en javascript, DOM virtual, grid y flexbox en CSS.
 
 Seguimos vivos y preparados para el próximo reto.
 

@@ -43,7 +43,9 @@ const mountContent = arr => {
     element.innerHTML = `<div class='card zoom'>
     <div><span>Título</span><h3>${song.title}</h3></div>
       <div><span>Banda</span><p>${song.band}</p></div>
-      <div><span>Duración</span><p>${song.songLength}</p></div>
+      <div><span>Duración</span><p>${convertirSegundos(
+        song.songLength
+      )}</p></div>
       <button onclick="removeSong(${song.id})">X</button>
     </div>`;
     content.appendChild(element);
@@ -150,6 +152,24 @@ for (let item of listOfPlaylists) {
 
   sidebarList.appendChild(element);
 }
+
+function convertirSegundos(segundos) {
+  var horas = parseInt(segundos / 3600);
+  var restoHoras = segundos % 3600;
+  var min = parseInt(restoHoras / 60);
+  var restoSegundos = parseInt(segundos % 60);
+  if (horas < 10) {
+    horas = '0' + horas;
+  }
+  if (min < 10) {
+    min = '0' + min;
+  }
+  if (restoSegundos < 10) {
+    restoSegundos = '0' + restoSegundos;
+  }
+  return min + 'm:' + restoSegundos + 's';
+}
+
 id = 0;
 playList = listOfPlaylists[0].list;
 

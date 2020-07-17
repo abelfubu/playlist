@@ -5,6 +5,7 @@ body {
   font-family: 'Baloo Da 2', cursive;
   -webkit-font-smoothing: antialiased;
   background: #c6ffdd46;
+  height: 200vh;
 }
 
 header {
@@ -22,6 +23,15 @@ header {
 
 header ul {
   display: flex;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a:hover {
+  color: #f7797d;
 }
 
 ul {
@@ -92,21 +102,6 @@ aside {
   }
   to {
     transform: translateX(0px);
-  }
-}
-
-@keyframes slide-down {
-  0% {
-    transform: translateX(-800px);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(50px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
   }
 }
 
@@ -267,12 +262,4 @@ p {
 
 #logo {
   font-weight: bold;
-}
-
-#abel {
-  position: absolute;
-  bottom: 16px;
-  left: 22%;
-  z-index: 3;
-  margin: 0 auto;
 }
