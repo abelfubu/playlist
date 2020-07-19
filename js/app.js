@@ -8,8 +8,10 @@ const sidebarList = document.querySelector('#list-ul');
 const topBands = document.querySelector('#top5');
 const pTitle = document.querySelector('#p-title');
 const shuffleBtn = document.querySelector('#shuffle');
+let windowWidth = document.documentElement.clientWidth;
 const listOfPlaylists = new Array();
 let defaultPlayList = new PlayList('myList');
+let lastWindowWidth;
 listOfPlaylists.push(defaultPlayList);
 let playList = listOfPlaylists[0];
 let songCount = 0;
@@ -17,17 +19,18 @@ let songCount = 0;
 let id = 0;
 
 window.addEventListener('resize', function () {
-  if (document.documentElement.clientWidth < 1025) {
+  windowWidth = document.documentElement.clientWidth;
+  if ( windowWidth < 1025 && lastWindowWidth !== windowWidth) {
     aside.classList.replace('slide-in', 'slide-out');
     main.style.marginLeft = 0;
-    btn.innerHTML = '=';
-    open = !open;
-  } else if (document.documentElement.clientWidth > 1025) {
+    btn.innerHTML = '=';    
+  } else if (windowWidth > 1025 && lastWindowWidth !== windowWidth) {
     aside.classList.replace('slide-out', 'slide-in');
     main.style.marginLeft = '260px';
-    btn.innerHTML = 'X';
-    open = !open;
+    btn.innerHTML = 'X';    
   }
+  lastWindowWidth = windowWidth;
+  open = !open;
 });
 
 let open = true;
