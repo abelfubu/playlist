@@ -22,9 +22,9 @@ window.addEventListener('resize', function () {
     main.style.marginLeft = 0;
     btn.innerHTML = '=';
     open = !open;
-  } else {
+  } else if (document.documentElement.clientWidth > 1025) {
     aside.classList.replace('slide-out', 'slide-in');
-    main.style.marginLeft = '25%';
+    main.style.marginLeft = '260px';
     btn.innerHTML = 'X';
     open = !open;
   }
